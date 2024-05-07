@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 60px; /* Adjusted for the navbar height */
+        }
+        #weather-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img.placeholder {
+            width: 100%;
+            height: auto;
+            background: #eee;
+        }
+        .navbar {
+            background-color: #007BFF;
+            border-color: #007BFF;
+        }
+        .navbar-brand {
+            color: #fff;
+        }
+        .navbar-brand img {
+            max-height: 30px;
+            margin-right: 10px;
+        }
+        .navbar-nav > li > a {
+            color: #fff;
+        }
+        .navbar-nav > li > a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                  
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Logout</a></li>
+                </ul>
+                <!-- Add additional navbar elements if needed -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5" id="weather-container">
+        <h1 class="mb-4">Weather Application</h1>
+        
+        <!-- Weather Form -->
+        <form>
+            <div class="form-group">
+                <label for="location">Enter City Name or Coordinates (lat, lon):</label>
+                <input type="text" class="form-control" id="location" placeholder="e.g., London or 51.51, -0.13" required>
+            </div>
+            <button type="button" class="btn btn-primary">Get Weather</button>
+        </form>
+
+        <!-- Weather Display -->
+        <div class="mt-4">
+            <h2>Current Weather</h2>
+            <p>Temperature: 25°C</p>
+            <p>Humidity: 50%</p>
+            <p>Pressure: 1010 hPa</p>
+            <p>Wind Speed: 5 m/s</p>
+        </div>
+
+        <div class="mt-4">
+            <h2>Weather Forecast</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Temperature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2022-03-01</td>
+                        <td>Clear Sky</td>
+                        <td>22°C</td>
+                    </tr>
+                    <tr>
+                        <td>2022-03-02</td>
+                        <td>Partly Cloudy</td>
+                        <td>23°C</td>
+                    </tr>
+                    <!-- Add more forecast rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+
